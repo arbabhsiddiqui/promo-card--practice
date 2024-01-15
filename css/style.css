@@ -1,0 +1,120 @@
+:root {
+  --base: linear-gradient(306deg, #b29b93, #dacdc9);
+  --box-shadow: 0px 39px 25px -17px #a15b4132;
+  --accent: #c5aea7;
+  --primary: #1e1411;
+  --text-dark: #1e1411;
+  --text-light: #ffffff;
+  --card-background: #ede9e2;
+  --body-font: "Mulish", sans-serif;
+  --header-font: "Mukta", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--body-font);
+  font-weight: 600;
+}
+
+.card {
+  max-width: 578px;
+  background: var(--card-background);
+  border-radius: 41px;
+  padding: 70px;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+.card::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 578px;
+  height: 622px;
+  background: var(--accent);
+  border-radius: 41px;
+}
+.card .title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .title-area h3 {
+  text-transform: uppercase;
+  letter-spacing: -0.1px;
+  font-size: 16px;
+  font-family: var(--header-font);
+}
+.card .text-area {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card .text-area h1 {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--header-font);
+}
+.card .text-area p {
+  font-weight: 600;
+  font-size: 24px;
+  width: 90%;
+}
+.card .usp__area {
+  margin-top: 40px;
+  display: flex;
+  gap: 88px;
+}
+.card .usp__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card .usp__item span {
+  font-weight: 800;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: var(--header-font);
+}
+.card .btn__container {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+.card .created-date {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn {
+  min-width: 207px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 24px;
+  border-radius: 8px;
+  border: none;
+}
+.btn--transparent {
+  border: 1px solid var(--primary);
+  background: transparent;
+}
+.btn--primary {
+  background: var(--primary);
+  color: var(--text-light);
+}/*# sourceMappingURL=style.css.map */
